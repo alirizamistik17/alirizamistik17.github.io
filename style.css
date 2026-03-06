@@ -1,0 +1,108 @@
+/* --- GENEL AYARLAR --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- GRUP SEÇİCİ (İster: h1, h2, p seçicisi) --- */
+h1, h2, p {
+    margin-bottom: 10px;
+}
+
+/* --- HEADER VE NAVİGASYON --- */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- HİYERARŞİK SEÇİCİ (İster: nav ul li yapısı) --- */
+nav ul li {
+    display: inline-block; /* İster: Yatay menü için display mantığı */
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s; /* Geçiş efekti */
+}
+
+/* --- HOVER EFEKTİ (İster: Basit hover) --- */
+nav ul li a:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* --- ANA İÇERİK ALANI --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.intro-box {
+    background-color: #ebf5ff;
+    padding: 20px;
+    border: 1px solid #cce5ff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- İKİ SÜTUNLU YAPI (display mantığı) --- */
+.content-wrapper {
+    display: flex; /* Modern kutu yan yana getirme mantığı */
+    gap: 20px;
+}
+
+/* Sol İçerik Kutusu */
+.content-main {
+    flex: 2;
+    background-color: #fffde7; /* Sarımsı arka plan */
+    padding: 20px;
+    border: 1px solid #fff9c4;
+}
+
+/* Sağ Yan Menü */
+.sidebar {
+    flex: 1;
+    background-color: #e0f7fa; /* Mavimsi arka plan */
+    padding: 20px;
+    border: 1px solid #b2ebf2;
+}
+
+/* --- ÖZEL METİN DÜZENLEMELERİ (İster: font-size, color, text-align vb.) --- */
+.content-main p, .sidebar p {
+    font-size: 14px;
+    color: #444;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
