@@ -1,4 +1,4 @@
-/* --- GENEL AYARLAR --- */
+/* --- GENEL SIFIRLAMA --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #f4f7f6;
     color: #333;
+    line-height: 1.6;
 }
 
 /* --- HEADER & NAV --- */
@@ -34,16 +35,17 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #555;
+    padding: 8px 12px;
 }
 
-/* --- FORM KONTEYNER (BOX MODEL) --- */
+/* --- ILETISIM FORMU (LAB 3) --- */
 .contact-container {
-    width: 600px; /*  */
-    margin: 40px auto; /*  */
-    padding: 30px; /*  */
+    width: 600px; /* [cite: 14] */
+    margin: 40px auto; /* [cite: 14] */
+    padding: 30px; /* [cite: 15] */
     background-color: #fff;
-    border: 1px solid #ddd; /*  */
-    border-radius: 10px; /*  */
+    border: 1px solid #ddd; /* [cite: 16] */
+    border-radius: 10px; /* [cite: 16] */
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
@@ -52,43 +54,46 @@ nav ul li a {
     margin-bottom: 25px;
 }
 
-/* ÇOKLU SEÇİCİ: Sadece geniş alanlar %100 olacak  */
+/* SADECE YAZI KUTULARI %100 OLSUN  */
 .contact-container input[type="text"], 
 .contact-container input[type="email"], 
 .contact-container input[type="password"], 
 .contact-container select, 
 .contact-container textarea {
     width: 100%; /*  */
-    padding: 12px; /*  */
-    margin-bottom: 20px; /*  */
+    padding: 12px; /* [cite: 19] */
+    margin-bottom: 20px; /* [cite: 20] */
     border: 1px solid #ccc;
     border-radius: 5px;
     display: block;
 }
 
-/* GRİ KUTU VE BUTON HİZALAMA */
+/* RADIO VE CHECKBOX BOZULMASINI ONLEYEN KISIM */
 .form-group-box {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Görseldeki gri kutu [cite: 3] */
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 20px;
     border: 1px solid #eee;
 }
 
-/* Radio/Checkbox Boyutunu Koru (Bozulmayı önleyen kısım) */
-.form-group-box input {
-    width: auto !important;
-    display: inline-block !important;
+/* Butonlar küçük kalsın ve yazıyla yan yana dursun */
+.form-group-box input[type="radio"], 
+.form-group-box input[type="checkbox"] {
+    width: auto !important; /* Devleşmeyi engeller */
+    display: inline-block !important; /* Yan yana getirir */
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .form-group-box label {
     display: inline-block;
     font-weight: normal;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
-/* BUTONLAR  */
+/* --- BUTONLAR --- */
 .button-group {
     display: flex;
     gap: 10px;
@@ -96,10 +101,10 @@ nav ul li a {
 
 .btn-gonder {
     flex: 1;
-    background-color: #007bff; /*  */
+    background-color: #007bff; /* [cite: 21] */
     color: white;
-    padding: 15px; /*  */
-    border: none; /*  */
+    padding: 15px; /* [cite: 21] */
+    border: none; /* [cite: 21] */
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
