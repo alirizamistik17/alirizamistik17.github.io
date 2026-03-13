@@ -1,162 +1,69 @@
-/* --- GENEL AYARLAR --- */
-* {
-    box-sizing: border-box;
+/* Improved and Professional CSS Styling */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
     color: #333;
-    line-height: 1.6;
 }
 
-/* --- GRUP SEÇİCİ (İster: h1, h2, p seçicisi) --- */
-h1, h2, p {
-    margin-bottom: 10px;
-}
-
-/* --- HEADER VE NAVİGASYON --- */
+/* Header Styles */
 header {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+/* Navigation Styles */
+nav {
+    margin: 15px 0;
+    padding: 10px;
 }
 
-/* --- HİYERARŞİK SEÇİCİ (İster: nav ul li yapısı) --- */
-nav ul li {
-    display: inline-block; /* İster: Yatay menü için display mantığı */
-    margin-left: 15px;
-}
-
-nav ul li a {
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
     text-decoration: none;
-    color: #555;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.3s; /* Geçiş efekti */
 }
 
-/* --- HOVER EFEKTİ (İster: Basit hover) --- */
-nav ul li a:hover {
-    background-color: #4a90e2;
-    color: white;
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* --- ANA İÇERİK ALANI --- */
+/* Main Content Styles */
 main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.intro-box {
-    background-color: #ebf5ff;
     padding: 20px;
-    border: 1px solid #cce5ff;
+    background: #ffffff;
     border-radius: 5px;
-    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* --- İKİ SÜTUNLU YAPI (display mantığı) --- */
-.content-wrapper {
-    display: flex; /* Modern kutu yan yana getirme mantığı */
-    gap: 20px;
-}
-
-/* Sol İçerik Kutusu */
-.content-main {
-    flex: 2;
-    background-color: #fffde7; /* Sarımsı arka plan */
-    padding: 20px;
-    border: 1px solid #fff9c4;
-}
-
-/* Sağ Yan Menü */
-.sidebar {
-    flex: 1;
-    background-color: #e0f7fa; /* Mavimsi arka plan */
-    padding: 20px;
-    border: 1px solid #b2ebf2;
-}
-
-/* --- ÖZEL METİN DÜZENLEMELERİ (İster: font-size, color, text-align vb.) --- */
-.content-main p, .sidebar p {
-    font-size: 14px;
-    color: #444;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-/* --- FOOTER --- */
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #777;
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
-}
-/* --- LAB 3: ILETISIM FORMU STILLERI --- */
-
-.contact-container {
-    width: 600px;
-    margin: 50px auto; /* Sayfayı ortalar */
-    padding: 30px; /* İç boşluk */
-    border: 1px solid #ddd; /* Belirgin kenarlık */
-    border-radius: 10px; /* Köşe yuvarlama */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Çoklu seçici kullanımı  */
-.contact-container input[type="text"], 
-.contact-container input[type="email"], 
-.contact-container input[type="password"],
-.contact-container select, 
-.contact-container textarea {
-    width: 100%; /* Tam genişlik  */
-    padding: 10px; /* Ferah durması için  */
-    margin-bottom: 20px; /* Elemanlar arası boşluk  */
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav {
+        display: block;
+        text-align: center;
+    }
 }
 
-/* Buton Stilleri */
-.btn-gonder {
-    background-color: #007bff; /* Mavi arka plan */
-    color: white;
-    border: none;
-    padding: 12px 30px; /* Büyük buton */
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-temizle {
-    background-color: #dc3545; /* Kırmızı arka plan */
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-/* Radio ve Checkbox Arka Plan Kutuları  */
-.radio-group, .checkbox-group {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
+/* Additional Styles (add here) */
