@@ -9,21 +9,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Grup Seçici */
-h1, 
-h2, 
-p {
-    margin-bottom: 15px;
-}
-
-/* --- HEADER VE NAVİGASYON --- */
+/* --- HEADER & NAV --- */
 header {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-container {
@@ -34,7 +26,6 @@ header {
     margin: 0 auto;
 }
 
-/* Hiyerarşik Seçici */
 nav ul li {
     display: inline-block;
     margin-left: 15px;
@@ -42,104 +33,62 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #555555;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.3s;
+    color: #555;
 }
 
-nav ul li a:hover {
-    background-color: #4a90e2;
-    color: #ffffff;
-}
-
-/* --- SAYFA DÜZENİ (LAB 2) --- */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.intro-box {
-    background-color: #ebf5ff;
-    padding: 20px;
-    border: 1px solid #cce5ff;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.content-wrapper {
-    display: flex;
-    gap: 20px;
-}
-
-.content-main {
-    flex: 2;
-    background-color: #fffde7;
-    padding: 20px;
-    border: 1px solid #fff9c4;
-    border-radius: 5px;
-}
-
-.sidebar {
-    flex: 1;
-    background-color: #e0f7fa;
-    padding: 20px;
-    border: 1px solid #b2ebf2;
-    border-radius: 5px;
-}
-
-/* --- İLETİŞİM FORMU (LAB 3 GEREKSİNİMLERİ) --- */
+/* --- FORM KONTEYNER (BOX MODEL) --- */
 .contact-container {
-    width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
+    width: 600px; /*  */
+    margin: 40px auto; /*  */
+    padding: 30px; /*  */
+    background-color: #fff;
+    border: 1px solid #ddd; /*  */
+    border-radius: 10px; /*  */
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* 1. Sadece yazı yazılan kutuları 100% yapıyoruz */
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ÇOKLU SEÇİCİ: Sadece geniş alanlar %100 olacak  */
 .contact-container input[type="text"], 
 .contact-container input[type="email"], 
 .contact-container input[type="password"], 
 .contact-container select, 
 .contact-container textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
+    width: 100%; /*  */
+    padding: 12px; /*  */
+    margin-bottom: 20px; /*  */
+    border: 1px solid #ccc;
     border-radius: 5px;
-    display: block; /* Bunlar alt alta dursun */
+    display: block;
 }
 
-/* 2. Radio ve Checkbox'ları küçültüp yazıyla yan yana getiriyoruz */
-.form-group-box input[type="radio"], 
-.form-group-box input[type="checkbox"] {
-    width: auto; /* Tüm satırı kaplamasın  */
-    display: inline-block; /* Yazıyla yan yana dursun */
-    margin-right: 10px; /* Yazıyla arasına boşluk koy */
-    margin-bottom: 15px;
-}
-
-/* 3. Gri kutu tasarımı (Lab 3 isteği) */
+/* GRİ KUTU VE BUTON HİZALAMA */
 .form-group-box {
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 20px;
-    border: 1px solid #eeeeee;
+    border: 1px solid #eee;
+}
+
+/* Radio/Checkbox Boyutunu Koru (Bozulmayı önleyen kısım) */
+.form-group-box input {
+    width: auto !important;
+    display: inline-block !important;
+    margin-right: 10px;
 }
 
 .form-group-box label {
+    display: inline-block;
     font-weight: normal;
-    margin-left: 2px;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-/* Buton Stilleri */
+/* BUTONLAR  */
 .button-group {
     display: flex;
     gap: 10px;
@@ -147,10 +96,10 @@ main {
 
 .btn-gonder {
     flex: 1;
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 15px 25px;
-    border: none;
+    background-color: #007bff; /*  */
+    color: white;
+    padding: 15px; /*  */
+    border: none; /*  */
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -159,20 +108,17 @@ main {
 .btn-temizle {
     flex: 1;
     background-color: #dc3545;
-    color: #ffffff;
-    padding: 15px 25px;
+    color: white;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
 
-/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 20px;
-    font-size: 12px;
-    color: #777777;
-    border-top: 1px solid #dddddd;
     margin-top: 40px;
+    border-top: 1px solid #ddd;
 }
