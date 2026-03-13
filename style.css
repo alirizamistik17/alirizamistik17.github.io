@@ -106,3 +106,57 @@ footer {
     border-top: 1px solid #ddd;
     margin-top: 40px;
 }
+/* --- LAB 3: ILETISIM FORMU STILLERI --- */
+
+.contact-container {
+    width: 600px;
+    margin: 50px auto; /* Sayfayı ortalar */
+    padding: 30px; /* İç boşluk */
+    border: 1px solid #ddd; /* Belirgin kenarlık */
+    border-radius: 10px; /* Köşe yuvarlama */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Çoklu seçici kullanımı  */
+.contact-container input[type="text"], 
+.contact-container input[type="email"], 
+.contact-container input[type="password"],
+.contact-container select, 
+.contact-container textarea {
+    width: 100%; /* Tam genişlik  */
+    padding: 10px; /* Ferah durması için  */
+    margin-bottom: 20px; /* Elemanlar arası boşluk  */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buton Stilleri */
+.btn-gonder {
+    background-color: #007bff; /* Mavi arka plan */
+    color: white;
+    border: none;
+    padding: 12px 30px; /* Büyük buton */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-temizle {
+    background-color: #dc3545; /* Kırmızı arka plan */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Radio ve Checkbox Arka Plan Kutuları  */
+.radio-group, .checkbox-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
