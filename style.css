@@ -1,162 +1,30 @@
 /* --- GENEL AYARLAR --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* --- GRUP SEÇİCİ (İster: h1, h2, p seçicisi) --- */
-h1, h2, p {
-    margin-bottom: 10px;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+h1, h2, p { margin-bottom: 15px; }
 
 /* --- HEADER VE NAVİGASYON --- */
-header {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
+header { background-color: #fff; padding: 20px; border-bottom: 1px solid #ddd; }
+.header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; }
+nav ul li { display: inline-block; margin-left: 15px; }
+nav ul li a { text-decoration: none; color: #555; padding: 8px 12px; border-radius: 4px; transition: 0.3s; }
+nav ul li a:hover { background-color: #4a90e2; color: white; }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+/* --- SAYFA DÜZENİ --- */
+main { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+.intro-box { background-color: #ebf5ff; padding: 20px; border: 1px solid #cce5ff; border-radius: 5px; margin-bottom: 20px; }
+.content-wrapper { display: flex; gap: 20px; }
+.content-main { flex: 2; background-color: #fffde7; padding: 20px; border: 1px solid #fff9c4; border-radius: 5px; }
+.sidebar { flex: 1; background-color: #e0f7fa; padding: 20px; border: 1px solid #b2ebf2; border-radius: 5px; }
 
-/* --- HİYERARŞİK SEÇİCİ (İster: nav ul li yapısı) --- */
-nav ul li {
-    display: inline-block; /* İster: Yatay menü için display mantığı */
-    margin-left: 15px;
+/* --- FORM STİLLERİ (LAB 3) --- */
+.contact-container { background-color: #fff; padding: 25px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+.contact-container input, .contact-container select, .contact-container textarea { 
+    width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; display: block;
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.3s; /* Geçiş efekti */
-}
-
-/* --- HOVER EFEKTİ (İster: Basit hover) --- */
-nav ul li a:hover {
-    background-color: #4a90e2;
-    color: white;
-}
-
-/* --- ANA İÇERİK ALANI --- */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.intro-box {
-    background-color: #ebf5ff;
-    padding: 20px;
-    border: 1px solid #cce5ff;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/* --- İKİ SÜTUNLU YAPI (display mantığı) --- */
-.content-wrapper {
-    display: flex; /* Modern kutu yan yana getirme mantığı */
-    gap: 20px;
-}
-
-/* Sol İçerik Kutusu */
-.content-main {
-    flex: 2;
-    background-color: #fffde7; /* Sarımsı arka plan */
-    padding: 20px;
-    border: 1px solid #fff9c4;
-}
-
-/* Sağ Yan Menü */
-.sidebar {
-    flex: 1;
-    background-color: #e0f7fa; /* Mavimsi arka plan */
-    padding: 20px;
-    border: 1px solid #b2ebf2;
-}
-
-/* --- ÖZEL METİN DÜZENLEMELERİ (İster: font-size, color, text-align vb.) --- */
-.content-main p, .sidebar p {
-    font-size: 14px;
-    color: #444;
-    text-align: justify;
-    line-height: 1.8;
-}
+.btn-gonder { background-color: #007bff; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.btn-temizle { background-color: #dc3545; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-left: 10px; }
+.form-group-bg { background-color: #f9f9f9; padding: 10px; margin-bottom: 15px; border-radius: 5px; }
 
 /* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #777;
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
-}
-/* --- LAB 3: ILETISIM FORMU STILLERI --- */
-
-.contact-container {
-    width: 600px;
-    margin: 50px auto; /* Sayfayı ortalar */
-    padding: 30px; /* İç boşluk */
-    border: 1px solid #ddd; /* Belirgin kenarlık */
-    border-radius: 10px; /* Köşe yuvarlama */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Çoklu seçici kullanımı  */
-.contact-container input[type="text"], 
-.contact-container input[type="email"], 
-.contact-container input[type="password"],
-.contact-container select, 
-.contact-container textarea {
-    width: 100%; /* Tam genişlik  */
-    padding: 10px; /* Ferah durması için  */
-    margin-bottom: 20px; /* Elemanlar arası boşluk  */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Buton Stilleri */
-.btn-gonder {
-    background-color: #007bff; /* Mavi arka plan */
-    color: white;
-    border: none;
-    padding: 12px 30px; /* Büyük buton */
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-temizle {
-    background-color: #dc3545; /* Kırmızı arka plan */
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-/* Radio ve Checkbox Arka Plan Kutuları  */
-.radio-group, .checkbox-group {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
+footer { text-align: center; padding: 20px; font-size: 12px; color: #777; border-top: 1px solid #ddd; margin-top: 40px; }
