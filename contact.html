@@ -6,40 +6,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><div class="header-container"><h1>İletişim</h1>
-        <nav><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="about.html">Hakkımda</a></li><li><a href="interests.html">İlgi Alanları</a></li><li><a href="contact.html">İletişim</a></li></ul></nav>
-    </div></header>
+    <header>
+        <div class="header-container">
+            <h1>İletişim</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="interests.html">İlgi Alanları</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <main>
         <div class="contact-container">
             <h2>Detaylı İletişim Formu</h2>
-            <form>
-                <label>Ad Soyad:</label>
-                <input type="text" placeholder="Örn: Asaf Karataş" required>
+            <form action="#">
                 
-                <label>E-posta:</label>
-                <input type="email" placeholder="ornek@mail.com" required>
+                <label for="ad-soyad">Ad Soyad:</label> [cite: 8]
+                <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş" required>
 
-                <div class="form-group-bg">
-                    <p>İletişim Tercihi:</p>
-                    <input type="radio" name="t" id="r1"> <label for="r1">E-posta</label><br>
-                    <input type="radio" name="t" id="r2"> <label for="r2">Telefon</label>
+                <label for="email">E-posta Adresi:</label> [cite: 9]
+                <input type="email" id="email" placeholder="ornek@mail.com" required>
+
+                <label for="sifre">Başvuru Takip Şifresi:</label>
+                <input type="password" id="sifre" placeholder="Şifrenizi girin">
+
+                <p>İletişim Tercihi:</p>
+                <div class="form-group-box">
+                    <input type="radio" id="mail" name="tercih"> <label for="mail">Bana e-posta ile ulaşın</label><br>
+                    <input type="radio" id="tel" name="tercih"> <label for="tel">Bana telefonla ulaşın</label>
                 </div>
 
-                <label>Konu:</label>
-                <select>
-                    <option>İş Teklifi</option>
-                    <option>Soru</option>
-                    <option>Geri Bildirim</option>
+                <p>İlgi Alanları / Yetenekler:</p>
+                <div class="form-group-box">
+                    <input type="checkbox" id="html"> <label for="html">HTML</label><br>
+                    <input type="checkbox" id="css"> <label for="css">CSS</label><br>
+                    <input type="checkbox" id="algoritma"> <label for="algoritma">Algoritma</label>
+                </div>
+
+                <label for="konu">Konu:</label> [cite: 10]
+                <select id="konu">
+                    <option value="">Lütfen bir konu seçin...</option>
+                    <option value="is">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geribildirim">Geri Bildirim</option>
                 </select>
 
-                <label>Mesajınız:</label>
-                <textarea rows="4" placeholder="Mesajınızı buraya yazın..."></textarea>
+                <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                <input type="file" id="dosya">
 
-                <button type="submit" class="btn-gonder">Gönder</button>
-                <button type="reset" class="btn-temizle">Temizle</button>
+                <label for="mesaj">Mesajınız:</label> [cite: 11]
+                <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-gonder">Gönder</button> [cite: 12]
+                    <button type="reset" class="btn-temizle">Temizle</button>
+                </div>
             </form>
         </div>
     </main>
+
     <footer>© 2026 Web Programlama Dersi</footer>
 </body>
 </html>
