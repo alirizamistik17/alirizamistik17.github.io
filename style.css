@@ -100,10 +100,10 @@ main {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Çoklu Seçici: Sadece metin tabanlı girişleri 100% yapıyoruz */
-.contact-container input[type="text"],
-.contact-container input[type="email"],
-.contact-container input[type="password"],
+/* 1. Sadece yazı yazılan kutuları 100% yapıyoruz */
+.contact-container input[type="text"], 
+.contact-container input[type="email"], 
+.contact-container input[type="password"], 
 .contact-container select, 
 .contact-container textarea {
     width: 100%;
@@ -112,26 +112,25 @@ main {
     margin-bottom: 20px;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    display: block;
+    display: block; /* Bunlar alt alta dursun */
 }
 
-/* Radio ve Checkbox'ların genişliğini normale çekiyoruz (Hatanın çözümü) */
+/* 2. Radio ve Checkbox'ları küçültüp yazıyla yan yana getiriyoruz */
 .form-group-box input[type="radio"], 
 .form-group-box input[type="checkbox"] {
-    width: auto;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
+    width: auto; /* Tüm satırı kaplamasın  */
+    display: inline-block; /* Yazıyla yan yana dursun */
+    margin-right: 10px; /* Yazıyla arasına boşluk koy */
+    margin-bottom: 15px;
 }
 
-/* Görseldeki Gri Kutulu Seçim Grupları */
+/* 3. Gri kutu tasarımı (Lab 3 isteği) */
 .form-group-box {
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 20px;
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
 }
 
 .form-group-box label {
