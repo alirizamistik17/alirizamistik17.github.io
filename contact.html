@@ -2,10 +2,11 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İletişim | Detaylı Form</title>
+    <title>İletişim - Özgeçmişim</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <div class="header-container">
             <h1>İletişim</h1>
@@ -24,11 +25,10 @@
         <div class="contact-container">
             <h2>Detaylı İletişim Formu</h2>
             <form action="#">
-                
-                <label for="ad-soyad">Ad Soyad:</label> 
+                <label for="ad-soyad">Ad Soyad:</label>
                 <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş" required>
 
-                <label for="email">E-posta Adresi:</label> 
+                <label for="email">E-posta Adresi:</label>
                 <input type="email" id="email" placeholder="ornek@mail.com" required>
 
                 <label for="sifre">Başvuru Takip Şifresi:</label>
@@ -49,7 +49,7 @@
                     <input type="checkbox" id="algoritma"> <label for="algoritma">Algoritma</label>
                 </div>
 
-                <label for="konu">Konu:</label> 
+                <label for="konu">Konu:</label>
                 <select id="konu">
                     <option value="">Lütfen bir konu seçin...</option>
                     <option value="is">İş Teklifi</option>
@@ -60,11 +60,11 @@
                 <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
                 <input type="file" id="dosya">
 
-                <label for="mesaj">Mesajınız:</label> 
+                <label for="mesaj">Mesajınız:</label>
                 <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
                 <div class="button-group">
-                    <button type="submit" class="btn-gonder">Gönder</button> 
+                    <button type="submit" class="btn-gonder">Gönder</button>
                     <button type="reset" class="btn-temizle">Temizle</button>
                 </div>
             </form>
