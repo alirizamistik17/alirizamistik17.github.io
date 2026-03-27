@@ -3,64 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Rıza - Web Geliştirme Portfolyosu</title>
+    <title>Ali Rıza - Modern Portfolyo</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <div class="main-container">
-        <!-- 1) Navbar -->
         <nav class="navbar-flex">
-            <div class="logo"><strong>AR</strong> Portfolyo</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="AR Logo" class="logo-img">
+                <strong>AR</strong> Portfolyo
+            </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
                 <li><a href="about.html">Hakkımda</a></li>
                 <li><a href="interests.html">Yetenekler</a></li>
                 <li><a href="contact.html">İletişim</a></li>
             </ul>
-            <div class="bottom-badges">
-                <span>flex layout</span><span>justify-content</span><span>10vh height</span>
+            <div class="bottom-badges-container">
+                <div class="bottom-badges">
+                    <span>flex layout</span><span>justify-content</span><span>10vh height</span>
+                </div>
             </div>
         </nav>
 
-        <!-- 2) Hero Section -->
         <section class="hero-flex">
             <div class="hero-text">
                 <h1>Modern Web Arayüzleri</h1>
                 <p>Flexbox ve güncel CSS teknikleri kullanarak kullanıcı dostu, esnek ve şık web deneyimleri tasarlıyorum.</p>
                 <div class="line"></div>
-                <div class="line short"></div>
-                <button class="btn main-btn">Projelerimi Gör</button>
+                <a href="interests.html" class="btn btn-primary main-btn">Projelerimi Gör</a>
             </div>
             <div class="hero-img">
-                <!-- Profil fotoğrafı veya ikon gibi düşün -->
-                <div class="placeholder-circle"></div>
+                <img src="images/profile.jpg" alt="Ali Rıza Profil" class="profile-photo">
             </div>
-            <div class="bottom-badges">
-                <span>flex-direction: row</span><span>height: 30vh</span><span>align-items: stretch</span>
+            <div class="bottom-badges-container">
+                <div class="bottom-badges">
+                    <span>flex-direction: row</span><span>height: 30vh</span><span>align-items: stretch</span>
+                </div>
             </div>
         </section>
 
-        <!-- 3) Kartlar Bölümü (Yetenekler) -->
         <section class="cards-section">
             <div class="section-top">
                 <h2>Uzmanlık Alanlarım</h2>
                 <div class="top-tags"><span>multiple items</span><span>flex layout - wrap</span></div>
             </div>
             <div class="cards-wrapper">
-                <div class="single-card"><h3>HTML5</h3><p>Semantik Yapı</p><button class="btn">İncele</button></div>
-                <div class="single-card"><h3>CSS3</h3><p>Modern Tasarım</p><button class="btn">İncele</button></div>
-                <div class="single-card"><h3>JavaScript</h3><p>Dinamik Çözümler</p><button class="btn">İncele</button></div>
-                <div class="single-card"><h3>Flexbox</h3><p>Esnek Yerleşim</p><button class="btn">İncele</button></div>
-                <div class="single-card"><h3>Git/GitHub</h3><p>Versiyon Kontrol</p><button class="btn">İncele</button></div>
-                <div class="single-card"><h3>Responsive</h3><p>Mobil Uyumluluk</p><button class="btn">İncele</button></div>
+                <div class="single-card"><h3>HTML5</h3><p>Semantik Yapı</p><a href="about.html" class="btn btn-outline">İncele</a></div>
+                <div class="single-card"><h3>CSS3</h3><p>Modern Tasarım</p><a href="about.html" class="btn btn-outline">İncele</a></div>
+                <div class="single-card"><h3>JavaScript</h3><p>Dinamik Çözümler</p><a href="about.html" class="btn btn-outline">İncele</a></div>
+                <div class="single-card"><h3>Flexbox</h3><p>Esnek Yerleşim</p><a href="about.html" class="btn btn-outline">İncele</a></div>
+                <div class="single-card"><h3>Git/GitHub</h3><p>Versiyon Kontrol</p><a href="about.html" class="btn btn-outline">İncele</a></div>
+                <div class="single-card"><h3>Responsive</h3><p>Mobil Uyumluluk</p><a href="about.html" class="btn btn-outline">İncele</a></div>
             </div>
-            <div class="bottom-badges">
-                <span>flex-direction</span><span>flex layout + wrap</span><span>gap + align</span>
+            <div class="bottom-badges-container">
+                <div class="bottom-badges">
+                    <span>flex-direction</span><span>flex layout + wrap</span><span>gap + align</span>
+                </div>
             </div>
         </section>
 
-        <!-- 4) Flex Grow Bölümü (Özellikler) -->
         <section class="grow-section">
             <div class="section-top">
                 <h2>Neden Benimle Çalışmalısınız?</h2>
@@ -69,23 +72,22 @@
             <div class="grow-boxes">
                 <div class="box box-1">
                     <h3>Hız</h3>
-                    <p>Optimize edilmiş kodlar ile yüksek performans.</p>
-                    <button class="btn">Detay</button>
+                    <p>Optimize edilmiş kodlar.</p>
+                    <a href="about.html" class="btn btn-sm btn-light">Detay</a>
                 </div>
                 <div class="box box-2">
                     <h3>Esneklik</h3>
-                    <p>Her ekrana ve ihtiyaca uygun adaptif yapılar geliştiriyorum.</p>
-                    <button class="btn btn-g">Detay</button>
+                    <p>Her ekrana uygun adaptif yapılar geliştiriyorum.</p>
+                    <a href="about.html" class="btn btn-sm btn-light">Detay</a>
                 </div>
                 <div class="box box-3">
                     <h3>Düzen</h3>
-                    <p>Temiz, okunabilir ve sürdürülebilir kod mimarisi.</p>
-                    <button class="btn btn-o">Detay</button>
+                    <p>Temiz, okunabilir kod mimarisi.</p>
+                    <a href="about.html" class="btn btn-sm btn-light">Detay</a>
                 </div>
             </div>
         </section>
 
-        <!-- 5) Footer -->
         <footer class="footer-flex">
             <p>© 2026 - Ali Rıza | Marmara Üniversitesi Bilgisayar Programcılığı</p>
         </footer>
