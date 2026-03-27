@@ -2,39 +2,138 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Ana Sayfa | Ödev Portfolyosu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Rıza Mistik - Flexbox Ödevi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>CSS Temel Ödevi</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="about.html">Hakkımda</a></li>
-                    <li><a href="interests.html">İlgi Alanları</a></li>
-                    <li><a href="contact.html">İletişim</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="intro-box">
-            <h2>Hoş Geldiniz</h2>
-            <p>Bu site, Web Programlama dersi kapsamında hazırlanan laboratuvar ödevlerini içermektedir.</p>
+
+    <div class="wrapper">
+        <!-- 1) Navbar -->
+        <nav class="navbar">
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="interests.html">Dersler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+            <div class="badges">
+                <span>flex layout</span>
+                <span>justify-content</span>
+                <span>10vh height</span>
+                <span>100vw width</span>
+            </div>
+        </nav>
+
+        <!-- 2) Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hero Başlık</h1>
+                <p>Açıklama metni</p>
+                <div class="line"></div>
+                <div class="line short"></div>
+                <button class="btn">Buton</button>
+            </div>
+            <div class="hero-visual">
+                <div class="placeholder-img"></div>
+            </div>
+            <div class="badges">
+                <span>flex-direction: row</span>
+                <span>height: 30vh</span>
+                <span>align-items: stretch</span>
+            </div>
         </section>
-        <div class="content-wrapper">
-            <section class="content-main">
-                <h2>Ödev Amacı</h2>
-                <p>HTML5 semantik etiketlerini ve CSS3 kutu modelini (Box Model) kullanarak düzenli bir yapı oluşturmayı hedefliyoruz.</p>
-            </section>
-            <aside class="sidebar">
-                <h2>Bilgi Notu</h2>
-                <p>Bu sayfada CSS seçicileri ve hiyerarşik yapı kullanılmıştır.</p>
-            </aside>
-        </div>
-    </main>
-    <footer>© 2026 Web Programlama Dersi</footer>
+
+        <!-- 3) Kartlar Bölümü -->
+        <section class="cards-section">
+            <div class="section-header">
+                <h2>Kartlar Bölümü</h2>
+                <div class="header-badges">
+                    <span>multiple items</span>
+                    <span>flex layout - wrap</span>
+                </div>
+            </div>
+            <div class="cards-container">
+                <!-- 6 Kart istenmişti -->
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="card">
+                    <h3>Kart Başlığı</h3>
+                    <p>Kısa açıklama</p>
+                    <button class="btn">Buton</button>
+                </div>
+            </div>
+            <div class="badges">
+                <span>flex-direction</span>
+                <span>flex layout + wrap</span>
+                <span>gap + align/hizalama</span>
+                <span>height: 30vh</span>
+            </div>
+        </section>
+
+        <!-- 4) Flex Grow Uygulama -->
+        <section class="flex-grow-section">
+            <div class="section-header">
+                <h2>Flex Grow Uygulama</h2>
+                <div class="header-badges">
+                    <span>flex-grow:</span>
+                    <span>height: 20vh</span>
+                    <span>stretch (esneme)</span>
+                </div>
+            </div>
+            <div class="grow-container">
+                <div class="grow-box box-1">
+                    <h3>1 Kutu</h3>
+                    <p>flex-grow: 1;</p>
+                    <button class="btn">Buton</button>
+                </div>
+                <div class="grow-box box-2">
+                    <h3>2 Kutu</h3>
+                    <p>flex-grow: 2;</p>
+                    <button class="btn btn-green">Buton</button>
+                </div>
+                <div class="grow-box box-3">
+                    <h3>3 Kutu</h3>
+                    <p>flex-grow: 1;</p>
+                    <button class="btn btn-orange">Buton</button>
+                </div>
+            </div>
+            <div class="badges">
+                <span>flex-grow</span>
+                <span>height: 20vh</span>
+                <span>stretch (esneme)</span>
+            </div>
+        </section>
+
+        <!-- 5) Footer -->
+        <footer class="footer">
+            <p>© 2026 - Temel Flexbox Örneği</p>
+        </footer>
+    </div>
+
 </body>
 </html>
