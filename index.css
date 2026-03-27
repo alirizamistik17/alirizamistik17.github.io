@@ -1,1 +1,116 @@
+/* Temel Sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* Link alt çizgisini kaldır */
+}
 
+/* Ana Yapı: 100vh Zorunlu */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+/* Bölümlerin Genel Stili */
+section, nav, footer {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+
+/* 1) Navbar: 10vh */
+.navbar-flex {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-menu a {
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-menu a:hover {
+    color: #000;
+}
+
+/* 2) Hero: 30vh */
+.hero-flex {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.hero-text { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.hero-img { flex: 1; display: flex; justify-content: center; align-items: center; }
+.placeholder-circle { width: 100px; height: 100px; background: #eee; border-radius: 50%; }
+
+/* 3) Kartlar: 30vh */
+.cards-section {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+.section-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.cards-wrapper { display: flex; flex-wrap: wrap; gap: 8px; flex: 1; overflow: hidden; }
+.single-card { flex: 1 1 150px; border: 1px solid #eee; text-align: center; padding: 10px; border-radius: 5px; }
+
+/* 4) Flex Grow: 20vh */
+.grow-section {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+.grow-boxes { display: flex; flex: 1; gap: 10px; align-items: stretch; }
+.box { display: flex; flex-direction: column; justify-content: space-between; padding: 10px; border-radius: 5px; }
+
+/* Flex-Grow Oranları (Hocanın en çok bakacağı yer) */
+.box-1 { flex-grow: 1; background: #e3f2fd; }
+.box-2 { flex-grow: 2; background: #e8f5e9; }
+.box-3 { flex-grow: 1; background: #fff3e0; }
+
+/* 5) Footer: 10vh */
+.footer-flex {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Görseldeki Badge'ler (Gri küçük etiketler) */
+.bottom-badges {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.bottom-badges span, .top-tags span {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+    font-size: 10px;
+    border-radius: 10px;
+    color: #888;
+}
+
+/* Butonlar */
+.btn { padding: 6px 12px; border: none; border-radius: 4px; background: #7b9acc; color: white; cursor: pointer; }
+.btn-g { background: #6da36d; }
+.btn-o { background: #e6a23c; }
+.line { height: 4px; width: 60%; background: #eee; margin: 5px 0; }
