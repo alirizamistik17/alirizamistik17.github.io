@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB Position Örnek</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      min-height: 200vh;
+    }
+
+    /* ── FIXED: Sol üst – Ana Sayfaya Dön ── */
+    .btn-home {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 999;
+      background: #4169e1;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .btn-home:hover { background: #2a50c8; }
+
+    /* ── FIXED: Sağ alt – Yardımcı Menü ── */
+    .btn-menu {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #7c5cbf;
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-menu:hover { background: #5e43a0; transform: scale(1.05); }
+
+    /* ── Sayfa ortası ── */
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 80px 20px;
+    }
+
+    /* ── RELATIVE kapsayıcı ── */
+    .card {
+      position: relative;
+      width: 420px;
+      background: linear-gradient(135deg, #d8d4f0 0%, #e8e4f8 50%, #f0d8e8 100%);
+      border-radius: 18px;
+      padding: 44px 28px 60px 28px; /* üstte badge için boşluk, altta Son Kayıt için */
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      overflow: visible; /* badge'ler dışa taşısın */
+    }
+
+    /* Dekor daire – sağ orta */
+    .card::after {
+      content: '';
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card h2 {
+      position: relative;
+      z-index: 1;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+    }
+    .card p {
+      position: relative;
+      z-index: 1;
+      font-size: 13.5px;
+      color: #3a3a5c;
+      line-height: 1.65;
+      max-width: 210px;
+    }
+
+    /* ── ABSOLUTE 1: Ücretsiz – kartın ÜST kenarından dışarı taşıyor ── */
+    .badge-free {
+      position: absolute;
+      top: -14px;        /* kartın üstüne taşıyor */
+      left: 180px;       /* başlığın hizasına gelsin */
+      z-index: 10;
+      background: #ffe066;
+      color: #5a4500;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .badge-free:hover { transform: scale(1.08); }
+
+    /* ── ABSOLUTE 2: Tarih – sağ üst, içeride ── */
+    .badge-date {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      z-index: 10;
+      background: #c8f0c8;
+      color: #1a4d1a;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .badge-date:hover { transform: scale(1.08); }
+
+    /* ── ABSOLUTE 3: Konum – sağ orta, metnin dışında ── */
+    .badge-location {
+      position: absolute;
+      top: 52%;
+      right: 16px;
+      z-index: 10;
+      background: #fff;
+      color: #333;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .badge-location:hover {
+      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      transform: translateY(-2px);
+    }
+
+    /* ── ABSOLUTE 4: Son Kayıt – kartın SAĞ ALT köşesinden DIŞARI taşıyor ── */
+    .badge-deadline {
+      position: absolute;
+      bottom: -14px;     /* kartın altına taşıyor */
+      right: 20px;
+      z-index: 10;
+      background: #fff;
+      color: #333;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      cursor: pointer;
+
+      /* Yukarı-aşağı bounce animasyonu */
+      animation: bounce 1.4s ease-in-out infinite;
+    }
+    .badge-deadline:hover { background: #f0e8ff; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED sol üst -->
+  <a href="index.html" class="btn-home">Ana Sayfaya Dön</a>
+
+  <!-- FIXED sağ alt -->
+  <div class="btn-menu">Yardımcı Menü</div>
+
+  <div class="page">
+
+    <!-- RELATIVE kapsayıcı -->
+    <div class="card">
+
+      <!-- ABSOLUTE 1: üst kenara taşıyor -->
+      <span class="badge-free">Ücretsiz</span>
+
+      <!-- ABSOLUTE 2: sağ üst -->
+      <span class="badge-date">24 Nisan</span>
+
+      <h2>Teknoloji Topluluğu Etkinliği</h2>
+      <p>
+        Bu örnek sayfada amaç; CSS position özelliklerini
+        kullanarak tek bir duyuru kartı üzerinde relative, absolute,
+        fixed, z-index, hover, cursor ve animasyon mantığını
+        birlikte göstermektedir.
+      </p>
+
+      <!-- ABSOLUTE 3: orta sağ -->
+      <div class="badge-location">Konum: Konferans Salonu</div>
+
+      <!-- ABSOLUTE 4: alt kenara taşıyor + bounce -->
+      <div class="badge-deadline">Son Kayıt</div>
+
+    </div>
+
+    <footer>2025 – LAB Position Örnek Çalışması</footer>
+
+  </div>
+
+</body>
+</html>
