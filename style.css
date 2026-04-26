@@ -1,129 +1,229 @@
-/* --- GENEL SIFIRLAMA --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
     line-height: 1.6;
 }
 
-/* --- HEADER & NAV --- */
-header {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.header-container {
+/* --- ORTAK NAVBAR (index.css ile uyumlu modern yapı) --- */
+.navbar-flex {
+    min-height: 10vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+.nav-menu a {
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.nav-menu a:hover, .nav-menu a.active {
+    color: #2563eb;
+}
+
+/* --- ORTAK İÇERİK YAPILARI --- */
+main {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 0 20px;
+    min-height: 70vh;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 15px;
+h1, h2 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    padding: 8px 12px;
-}
-
-/* --- ILETISIM FORMU (LAB 3) --- */
-.contact-container {
-    width: 600px; /* [cite: 14] */
-    margin: 40px auto; /* [cite: 14] */
-    padding: 30px; /* [cite: 15] */
-    background-color: #fff;
-    border: 1px solid #ddd; /* [cite: 16] */
-    border-radius: 10px; /* [cite: 16] */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.contact-container h2 {
+.intro-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 25px;
 }
 
-/* SADECE YAZI KUTULARI %100 OLSUN  */
-.contact-container input[type="text"], 
-.contact-container input[type="email"], 
-.contact-container input[type="password"], 
-.contact-container select, 
-.contact-container textarea {
-    width: 100%; /*  */
-    padding: 12px; /* [cite: 19] */
-    margin-bottom: 20px; /* [cite: 20] */
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.content-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* responsive */
+}
+
+.content-main {
+    flex: 2;
+    min-width: 300px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 250px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+.sidebar p { margin-bottom: 0.5rem; color: #475569; }
+
+/* İlgi alanları listesi */
+.content-main ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+    color: #475569;
+}
+.content-main ul li { margin-bottom: 0.8rem; font-weight: 500; }
+.content-main blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.2rem;
+    margin-top: 1.5rem;
+    color: #64748b;
+    font-style: italic;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* --- ILETISIM FORMU (LAB 3) Modernize Edilmiş --- */
+.contact-form-area h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-form-area label, .contact-form-area > p {
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.5rem;
     display: block;
 }
 
-/* RADIO VE CHECKBOX BOZULMASINI ONLEYEN KISIM */
-.form-group-box {
-    background-color: #f8f9fa; /* Görseldeki gri kutu [cite: 3] */
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
+.contact-form-area input[type="text"], 
+.contact-form-area input[type="email"], 
+.contact-form-area input[type="password"], 
+.contact-form-area select, 
+.contact-form-area textarea {
+    width: 100%; 
+    padding: 12px 16px; 
+    margin-bottom: 1.5rem; 
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+    background: #f8fafc;
 }
 
-/* Butonlar küçük kalsın ve yazıyla yan yana dursun */
+.contact-form-area input:focus, .contact-form-area textarea:focus, .contact-form-area select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background: white;
+}
+
+.form-group-box {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e2e8f0;
+}
+
 .form-group-box input[type="radio"], 
 .form-group-box input[type="checkbox"] {
-    width: auto !important; /* Devleşmeyi engeller */
-    display: inline-block !important; /* Yan yana getirir */
-    margin-right: 10px;
+    width: auto !important; 
+    display: inline-block !important; 
+    margin-right: 8px;
     margin-bottom: 10px;
+    accent-color: #3b82f6;
 }
 
 .form-group-box label {
     display: inline-block;
-    font-weight: normal;
+    font-weight: 500;
     margin-bottom: 10px;
     cursor: pointer;
+    color: #334155;
+    margin-right: 15px;
 }
 
-/* --- BUTONLAR --- */
 .button-group {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.btn-gonder, .btn-temizle {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 .btn-gonder {
-    flex: 1;
-    background-color: #007bff; /* [cite: 21] */
+    background-color: #2563eb; 
     color: white;
-    padding: 15px; /* [cite: 21] */
-    border: none; /* [cite: 21] */
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
+.btn-gonder:hover { background-color: #1d4ed8; transform: translateY(-2px); }
 
 .btn-temizle {
-    flex: 1;
-    background-color: #dc3545;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
 }
+.btn-temizle:hover { background-color: #e2e8f0; }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+    padding: 2rem;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.9rem;
 }

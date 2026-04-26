@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB - CSS Position Duyuru Kartı</title>
+    <meta name="description" content="CSS Position özellikleri kullanılarak hazırlanmış etkileşimli duyuru kartı laboratuvar çalışması.">
+    <link rel="stylesheet" href="lab-position.css">
+</head>
+<body>
+
+    <!-- ===== FIXED ÖĞE #1: Ana Sayfaya Dön Butonu ===== -->
+    <a href="index.html" class="back-to-home">Ana Sayfaya Dön</a>
+
+    <!-- ===== BAŞLIK ALANI ===== -->
+    <div class="page-header">
+        <h1>CSS Position — Duyuru Kartı</h1>
+        <p>relative · absolute · fixed · z-index · hover · animasyonlar</p>
+    </div>
+
+    <!-- ===== KART KAPSAYICI ===== -->
+    <div class="card-container">
+
+        <!-- ===== DUYURU KARTI (position: relative) ===== -->
+        <div class="announcement-card">
+
+            <!-- Dekoratif daireler (absolute + z-index: üst üste binen öğeler) -->
+            <div class="circle-deco-1"></div>
+            <div class="circle-deco-2"></div>
+
+            <!-- Badge #1 — position: absolute (sol üst) -->
+            <span class="badge-free">Ücretsiz</span>
+
+            <!-- Badge #2 — position: absolute (sağ üst) -->
+            <span class="badge-date">24 Nisan</span>
+
+            <!-- Kart başlığı -->
+            <h2 class="card-title">Teknoloji Topluluğu Etkinliği</h2>
+
+            <!-- Kart açıklama metni -->
+            <p class="card-description">
+                Bu örnek sayfada amaç; CSS position özelliklerini
+                kullanarak tek bir duyuru kartı üzerinde relative, absolute,
+                fixed, z-index, hover, cursor ve animasyon mantığını
+                birlikte göstermektir.
+            </p>
+
+            <!-- Konum kutusu — position: absolute -->
+            <div class="location-box">Konum: Konferans Salonu</div>
+
+            <!-- Badge #3 — position: absolute (sağ alt) -->
+            <span class="badge-deadline">Son Kayıt</span>
+
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        2026 - LAB Position Örnek Çalışması
+    </footer>
+
+    <!-- ===== FIXED ÖĞE #2: Yardımcı Menü ===== -->
+    <a href="#" class="helper-menu">Yardımcı Menü</a>
+
+</body>
+</html>

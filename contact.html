@@ -6,59 +6,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>İletişim</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="about.html">Hakkımda</a></li>
-                    <li><a href="interests.html">İlgi Alanları</a></li>
-                    <li><a href="contact.html">İletişim</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar-flex">
+        <div class="logo">
+            <img src="images/arm_logo.png" alt="ARM Logo" class="logo-img">
+            <strong>ARM</strong> Ali Rıza Mıstık
         </div>
-    </header>
+        <ul class="nav-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">Yetenekler</a></li>
+            <li><a href="contact.html" class="active">İletişim</a></li>
+            <li><a href="labs.html">Laboratuvarlar</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <div class="contact-container"> <h2>Detaylı İletişim Formu</h2>
-            <form action="#">
-                <label for="ad">Ad Soyad:</label> <input type="text" id="ad" placeholder="Örn: Abuzer Kömürcü" required>
+        <div class="content-wrapper">
+            <section class="content-main contact-form-area">
+                <h2>Detaylı İletişim Formu</h2>
+                <form action="#">
+                    <label for="ad">Ad Soyad:</label> <input type="text" id="ad" placeholder="Örn: Abuzer Kömürcü" required>
 
-                <label for="mail">E-posta Adresi:</label> <input type="email" id="mail" placeholder="ornek@mail.com" required>
+                    <label for="mail">E-posta Adresi:</label> <input type="email" id="mail" placeholder="ornek@mail.com" required>
 
-                <label for="pass">Başvuru Takip Şifresi:</label>
-                <input type="password" id="pass" placeholder="Şifrenizi girin">
+                    <label for="pass">Başvuru Takip Şifresi:</label>
+                    <input type="password" id="pass" placeholder="Şifrenizi girin">
 
-                <p>İletişim Tercihi:</p>
-                <div class="form-group-box">
-                    <input type="radio" id="r1" name="t"> <label for="r1">Bana e-posta ile ulaşın</label><br>
-                    <input type="radio" id="r2" name="t"> <label for="r2">Bana telefonla ulaşın</label>
-                </div>
+                    <p>İletişim Tercihi:</p>
+                    <div class="form-group-box">
+                        <input type="radio" id="r1" name="t"> <label for="r1">Bana e-posta ile ulaşın</label><br>
+                        <input type="radio" id="r2" name="t"> <label for="r2">Bana telefonla ulaşın</label>
+                    </div>
 
-                <p>İlgi Alanları / Yetenekler:</p>
-                <div class="form-group-box">
-                    <input type="checkbox" id="c1"> <label for="c1">HTML</label><br>
-                    <input type="checkbox" id="c2"> <label for="c2">CSS</label><br>
-                    <input type="checkbox" id="c3"> <label for="c3">Algoritma</label>
-                </div>
+                    <p>İlgi Alanları / Yetenekler:</p>
+                    <div class="form-group-box">
+                        <input type="checkbox" id="c1"> <label for="c1">HTML</label><br>
+                        <input type="checkbox" id="c2"> <label for="c2">CSS</label><br>
+                        <input type="checkbox" id="c3"> <label for="c3">Algoritma</label>
+                    </div>
 
-                <label for="konu">Konu:</label> <select id="konu">
-                    <option value="">Lütfen bir konu seçin...</option>
-                    <option value="is">İş Teklifi</option>
-                    <option value="soru">Soru</option>
-                    <option value="geri">Geri Bildirim</option>
-                </select>
+                    <label for="konu">Konu:</label> <select id="konu">
+                        <option value="">Lütfen bir konu seçin...</option>
+                        <option value="is">İş Teklifi</option>
+                        <option value="soru">Soru</option>
+                        <option value="geri">Geri Bildirim</option>
+                    </select>
 
-                <label for="file">Dosya Yükle:</label>
-                <input type="file" id="file">
+                    <label for="file">Dosya Yükle:</label>
+                    <input type="file" id="file" style="margin-bottom: 20px;">
 
-                <label for="msg">Mesajınız:</label> <textarea id="msg" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+                    <label for="msg">Mesajınız:</label> <textarea id="msg" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
-                <div class="button-group">
-                    <button type="submit" class="btn-gonder">Gönder</button> <button type="reset" class="btn-temizle">Temizle</button>
-                </div>
-            </form>
+                    <div class="button-group">
+                        <button type="submit" class="btn-gonder">Gönder</button> <button type="reset" class="btn-temizle">Temizle</button>
+                    </div>
+                </form>
+            </section>
+            
+            <aside class="sidebar">
+                <h2>Bana Ulaşın</h2>
+                <p>Projeler, iş imkanları veya aklınıza takılan herhangi bir soru için yandaki formu doldurarak benimle iletişime geçebilirsiniz.</p>
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
+                <p><strong>E-posta:</strong></p>
+                <p>ali.riza.mistik1@gmail.com</p>
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
+                <p><strong>Lokasyon:</strong></p>
+                <p>Zeytinburnu, İstanbul</p>
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
+                <p><strong>Sosyal Medya:</strong></p>
+                <p><a href="#" style="color: #2563eb; font-weight: 600;">LinkedIn Profili</a></p>
+                <p><a href="#" style="color: #2563eb; font-weight: 600;">GitHub Hesabı</a></p>
+            </aside>
         </div>
     </main>
     <footer>© 2026 Web Programlama Dersi</footer>

@@ -6,23 +6,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><div class="header-container"><h1>İlgi Alanlarım</h1>
-        <nav><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="about.html">Hakkımda</a></li><li><a href="interests.html">İlgi Alanları</a></li><li><a href="contact.html">İletişim</a></li></ul></nav>
-    </div></header>
+    <nav class="navbar-flex">
+        <div class="logo">
+            <img src="images/arm_logo.png" alt="ARM Logo" class="logo-img">
+            <strong>ARM</strong> Ali Rıza Mıstık
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html" class="active">Yetenekler</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+            <li><a href="labs.html">Laboratuvarlar</a></li>
+        </ul>
+    </nav>
     <main>
         <div class="content-wrapper">
             <section class="content-main">
-                <h2>Teknoloji İlgi Alanlarım</h2>
-                <ul>
-                    <li>Web Geliştirme</li>
-                    <li>Yapay Zekâ Uygulamaları</li>
-                    <li>Mobil Uygulama (Flutter/React)</li>
+                <h2>Teknoloji Portföyüm ve Yeteneklerim</h2>
+                <p>CV'mde öne çıkan ve üzerinde projeler (TwinAI, Ubuntu Mini OS, Antigravity Stok vs.) ürettiğim başlıca teknoloji yığınları şunlardır:</p>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Programlama Dilleri:</strong> Python, Java, C, C++, C#, Dart, JavaScript, PHP, HTML/CSS. Bu dillerle hem donanım gömülü sistemler hem de tam donanımlı algoritmalar geliştiriyorum.</li>
+                    <li><strong>Yapay Zekâ ve Dil Modelleri:</strong> LangChain ve Groq API gibi LLM kütüphanelerini kullanarak kişisel yapay zeka asistanı ve veri analiz sistemleri entegre ediyorum.</li>
+                    <li><strong>Mobil ve Web Çerçeveleri:</strong> React Native, TypeScript, Bootstrap ve Antigravity mimarileriyle çapraz platform ürünler derliyorum.</li>
+                    <li><strong>Veritabanı ve Sunucu Sistemleri:</strong> PostgreSQL, MySQL ve Supabase (BaaS) mimarileriyle tetikleyici (Triggers) ve Stored Procedure içeren veritabanları tasarlıyorum. Linux (Ubuntu, Kali) terminal ortamına ve CLI mimarilerine oldukça hakimim.</li>
                 </ul>
             </section>
             <aside class="sidebar">
-                <h2>Kısa Sözlük</h2>
-                <p><strong>HTML:</strong> Web iskeleti.</p>
-                <p><strong>CSS:</strong> Görsel tasarım.</p>
+                <h2>Kullandığım Araçlar</h2>
+                <p><strong>Git & GitHub:</strong> Versiyon kontrolü.</p>
+                <p><strong>Figma:</strong> Arayüz Prototipleme.</p>
+                <p><strong>Unity:</strong> Oyun ve simülasyon geliştirme.</p>
+                <p><strong>Cisco Packet Tracer:</strong> Kurumsal ağ simülasyonu.</p>
+                <p><strong>Arduino:</strong> Donanım programlama.</p>
             </aside>
         </div>
     </main>

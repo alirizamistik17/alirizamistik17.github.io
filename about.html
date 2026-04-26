@@ -6,23 +6,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><div class="header-container"><h1>Hakkımda</h1>
-        <nav><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="about.html">Hakkımda</a></li><li><a href="interests.html">İlgi Alanları</a></li><li><a href="contact.html">İletişim</a></li></ul></nav>
-    </div></header>
+    <nav class="navbar-flex">
+        <div class="logo">
+            <img src="images/arm_logo.png" alt="ARM Logo" class="logo-img">
+            <strong>ARM</strong> Ali Rıza Mıstık
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html" class="active">Hakkımda</a></li>
+            <li><a href="interests.html">Yetenekler</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+            <li><a href="labs.html">Laboratuvarlar</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="intro-box">
-            <p>Merhaba, ben bir <strong>Bilgisayar Mühendisliği öğrencisiyim.</strong></p>
+            <p>Merhaba, ben Ali Rıza Mıstık. <strong>Marmara Üniversitesi Bilgisayar Mühendisliği</strong> öğrencisi ve <strong>Biruni Üniversitesi Bilgisayar Programcılığı (Bölüm 1.'si)</strong> mezunuyum. Hayalim dijital dünyada iz bırakacak akıllı, kullanıcı dostu ve inovatif yazılım çözümleri geliştirmektir.</p>
         </section>
         <div class="content-wrapper">
             <section class="content-main">
                 <h2>Ben Kimim?</h2>
-                <p>Web teknolojilerine ilgi duyuyor ve kendimi bu alanda geliştirmeyi hedefliyorum.</p>
-                <blockquote>"İyi yazılmış bir web sitesi, hem kullanıcıyı hem geliştiriciyi mutlu eder."</blockquote>
+                <p>Teknolojiye ve yazılıma olan tutkum erken yaşlarda başladı. Biruni Üniversitesi'ni 3.55 ortalamayla bölüm birincisi olarak bitirdikten sonra Marmara Üniversitesi Bilgisayar Mühendisliği lisans programına devam ediyorum. Hem akademik hem de pratik alanda kendimi sürekli geliştirerek, LangChain gibi yapay zeka entegrasyonlarından (TwinAI), React Native ile mobil projelere ve C/Bash ile Linux işletim sistemi araçlarına kadar çok geniş bir yelpazede projeler tasarladım.</p>
+                <p style="margin-top: 15px;">Ayrıca ANKAGEO'da edindiğim staj deneyimiyle Python tabanlı coğrafi veri işleme ve görüntü işleme (image processing) süreçlerinde yer aldım. Problem çözmeyi merkeze koyan, takım çalışmasına inanan ve her zaman büyük resme odaklanan bir geliştiriciyim.</p>
+                <blockquote>"Güçlü bir yazılım sadece kodlardan ibaret değildir; mimarisiyle, tasarımıyla ve barındırdığı yapay zekayla yaşayan organizmadır."</blockquote>
             </section>
             <aside class="sidebar">
                 <h2>Eğitim Bilgilerim</h2>
-                <p>Marmara Üniversitesi</p>
-                <p>Bilgisayar Mühendisliği Bölümü</p>
+                <p><strong>Marmara Üniversitesi</strong></p>
+                <p>Bilgisayar Mühendisliği (Devam Ediyor)</p>
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
+                <p><strong>Biruni Üniversitesi</strong></p>
+                <p>Bilgisayar Programcılığı (Bölüm 1.'si - 3.55/4.00)</p>
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
+                <h2>Staj Deneyimi</h2>
+                <p><strong>ANKAGEO:</strong> Python Görüntü İşleme & Web Geliştirme Stajyeri</p>
             </aside>
         </div>
     </main>
